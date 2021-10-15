@@ -1,4 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { AntDesign } from "@expo/vector-icons";
 import React, { FC, ReactElement } from "react";
 import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
 import { Button } from "../components";
@@ -25,17 +26,24 @@ export const Login: FC<LoginProps> = ({ navigation }): ReactElement => {
         onPress={() => navigation.navigate(Screens.HOME)}
         style={styles.btnSecondary}
       >
-        <Text style={{ color: Colors.BLACK, fontWeight: "500" }}>
-          Login with Gmail
-        </Text>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Image
+            style={{ height: 20, width: 20 }}
+            source={require("../assets/images/search.png")}
+          />
+          <Text style={styles.btnText}>Login with Gmail</Text>
+        </View>
       </Button>
       <Button
         style={styles.btnTertiary}
         onPress={() => navigation.navigate(Screens.HOME)}
       >
-        <Text style={{ color: Colors.WHITE, fontWeight: "500" }}>
-          Login with Apple
-        </Text>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <AntDesign name="apple1" size={20} color={Colors.WHITE} />
+          <Text style={{ ...styles.btnText, color: Colors.WHITE }}>
+            Login with Apple
+          </Text>
+        </View>
       </Button>
       <View style={styles.signUp}>
         <Text style={{ color: Colors.GRAY }}>Not a member?</Text>
@@ -83,6 +91,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 40,
     backgroundColor: Colors.TERTIARY,
     marginTop: 15,
+  },
+  btnText: {
+    fontWeight: "500",
+    marginLeft: 10,
+    marginTop: 4,
   },
   signUp: {
     flexDirection: "row",
