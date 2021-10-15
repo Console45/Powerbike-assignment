@@ -1,10 +1,9 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import { NativeStackParamList, Screens } from "./navigations";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Screens, NativeStackParamList } from "./navigations";
 import { Login } from "./screens";
 import { Home } from "./screens/Home";
-import { Cart } from "./screens/Cart";
 
 const Stack = createNativeStackNavigator<NativeStackParamList>();
 export default function App() {
@@ -19,11 +18,6 @@ export default function App() {
         <Stack.Screen
           name={Screens.HOME}
           component={Home}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name={Screens.CART}
-          component={Cart}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

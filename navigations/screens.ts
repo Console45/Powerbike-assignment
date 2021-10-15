@@ -3,6 +3,7 @@ export enum Screens {
   HOME = "Home",
   CART = "Cart",
   SHOP = "Shop",
+  RECORD = "Record",
 }
 
 export type NativeStackParamList = {
@@ -13,4 +14,5 @@ export type NativeStackParamList = {
 export type BottomTabParamList = {
   Shop: undefined;
   Cart: undefined;
+  Record: undefined;
 };
