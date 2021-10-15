@@ -3,9 +3,9 @@ import { Ionicons, MaterialIcons, Feather } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
 import { Colors, sizes } from "../theme";
 
-interface HomeHeaderProps {}
+interface HeaderProps {}
 
-export const HomeHeader: FC<HomeHeaderProps> = ({}): ReactElement => {
+export const Header: FC<HeaderProps> = ({}): ReactElement => {
   return (
     <View style={styles.container}>
       <Ionicons name="menu-outline" size={24} color={Colors.DEEP_GRAY} />
