@@ -9,7 +9,7 @@ import { Button } from "../components";
 
 interface TabNavigatorProps {}
 const Tab = createBottomTabNavigator<BottomTabParamList>();
-export const BottomTab: FC<TabNavigatorProps> = ({}): ReactElement => {
+const BottomTab: FC<TabNavigatorProps> = ({}): ReactElement => {
   const { tabBarStyle, actionBtnContainer, actionBtn } = styles;
   return (
     <Tab.Navigator
@@ -78,6 +78,7 @@ export const BottomTab: FC<TabNavigatorProps> = ({}): ReactElement => {
     </Tab.Navigator>
   );
 };
+export default BottomTab;
 
 const styles = StyleSheet.create({
   tabBarStyle: {
