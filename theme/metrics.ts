@@ -1,3 +1,3 @@
-export const sizes = {
-  mainPadding: 30,
-};
+export enum Sizes {
+  MAIN_PADDING = 30,
+}

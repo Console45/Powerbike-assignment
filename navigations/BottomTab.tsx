@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { BottomTabParamList, Screens } from ".";
-import { Cart, Shop } from "../screens";
+import { Cart, Home } from "../screens";
 import { Colors } from "../theme";
 import { Button } from "../components";
 
@@ -14,11 +14,11 @@ export const BottomTab: FC<TabNavigatorProps> = ({}): ReactElement => {
   return (
     <Tab.Navigator
       screenOptions={{ tabBarShowLabel: false, tabBarStyle }}
-      initialRouteName={Screens.SHOP}
+      initialRouteName={Screens.HOME}
     >
       <Tab.Screen
-        name={Screens.SHOP}
-        component={Shop}
+        name={Screens.HOME}
+        component={Home}
         options={{
           headerShown: false,
           tabBarIcon: (props) =>
@@ -39,7 +39,7 @@ export const BottomTab: FC<TabNavigatorProps> = ({}): ReactElement => {
       />
       <Tab.Screen
         name={Screens.RECORD}
-        component={Shop}
+        component={Home}
         options={{
           headerShown: false,
           tabBarIcon: (_) => (

@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from "react";
 import { Ionicons, MaterialIcons, Feather } from "@expo/vector-icons";
 import { View, StyleSheet } from "react-native";
-import { Colors, sizes } from "../theme";
+import { Colors, Sizes } from "../theme";
 
 interface HeaderProps {}
 
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: sizes.mainPadding,
+    paddingHorizontal: Sizes.MAIN_PADDING,
     marginTop: 5,
     alignItems: "center",
   },

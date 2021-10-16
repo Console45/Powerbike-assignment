@@ -1,6 +1,6 @@
-import React, { FC, ReactElement, Key } from "react";
+import React, { FC, ReactElement } from "react";
 import { View, StyleSheet, Text, ScrollView } from "react-native";
-import { Colors, sizes } from "../theme";
+import { Colors, Sizes } from "../theme";
 
 interface TabsProps {}
 
@@ -37,7 +37,7 @@ const TabItem: FC<TabItemProps> = ({ title, index }): ReactElement => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: sizes.mainPadding,
+    paddingLeft: Sizes.MAIN_PADDING,
     marginTop: 23,
   },
   tabItem: {

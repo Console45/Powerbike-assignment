@@ -23,7 +23,7 @@ export const Login: FC<LoginProps> = ({ navigation }): ReactElement => {
         <Text style={styles.title}>Power Bike Shop</Text>
       </View>
       <Button
-        onPress={() => navigation.navigate(Screens.HOME)}
+        onPress={() => navigation.navigate(Screens.TAB)}
         style={styles.btnSecondary}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -36,7 +36,7 @@ export const Login: FC<LoginProps> = ({ navigation }): ReactElement => {
       </Button>
       <Button
         style={styles.btnTertiary}
-        onPress={() => navigation.navigate(Screens.HOME)}
+        onPress={() => navigation.navigate(Screens.TAB)}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <AntDesign name="apple1" size={20} color={Colors.WHITE} />

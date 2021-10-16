@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { NativeStackParamList, Screens } from "./navigations";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Login } from "./screens";
-import { Home } from "./screens/Home";
+import { BottomTab } from "./navigations/BottomTab";
 
 const Stack = createNativeStackNavigator<NativeStackParamList>();
 export default function App() {
@@ -16,8 +16,8 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name={Screens.HOME}
-          component={Home}
+          name={Screens.TAB}
+          component={BottomTab}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

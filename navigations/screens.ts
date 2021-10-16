@@ -2,17 +2,17 @@ export enum Screens {
   LOGIN = "Login",
   HOME = "Home",
   CART = "Cart",
-  SHOP = "Shop",
+  TAB = "Tab",
   RECORD = "Record",
 }
 
 export type NativeStackParamList = {
-  Home: undefined;
+  Tab: undefined;
   Login: undefined;
 };
 
 export type BottomTabParamList = {
-  Shop: undefined;
+  Home: undefined;
   Cart: undefined;
   Record: undefined;
 };
