@@ -1,7 +1,12 @@
 import React, { FC, ReactElement } from "react";
 import { StyleSheet, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import {
+  Ionicons,
+  MaterialIcons,
+  Feather,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
 import { BottomTabParamList, Screens } from ".";
 import { Cart, Home } from "../screens";
 import { Colors } from "../theme";
@@ -20,7 +25,39 @@ const BottomTab: FC<TabNavigatorProps> = ({}): ReactElement => {
         name={Screens.HOME}
         component={Home}
         options={{
-          headerShown: false,
+          headerShadowVisible: false,
+          headerTitle: () => (
+            <MaterialIcons
+              name="pedal-bike"
+              size={35}
+              color={Colors.DEEP_GRAY}
+            />
+          ),
+          headerLeft: () => (
+            <View style={{ marginLeft: 30 }}>
+              <Ionicons
+                name="menu-outline"
+                size={24}
+                color={Colors.DEEP_GRAY}
+              />
+            </View>
+          ),
+          headerRight: () => (
+            <View style={{ flexDirection: "row", marginRight: 30 }}>
+              <Feather
+                name="search"
+                style={{ marginRight: 10 }}
+                size={24}
+                color={Colors.DEEP_GRAY}
+              />
+              <Ionicons
+                name="ios-notifications-outline"
+                size={24}
+                color={Colors.DEEP_GRAY}
+              />
+            </View>
+          ),
+
           tabBarIcon: (props) =>
             props.focused ? (
               <MaterialCommunityIcons
