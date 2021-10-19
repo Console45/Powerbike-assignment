@@ -29,10 +29,4 @@ export const products: Product[] = [
     amount: "980.00",
     image: require("../assets/images/norco.png"),
   },
-  {
-    id: 5,
-    name: "Norco Bike",
-    amount: "980.00",
-    image: require("../assets/images/norco.png"),
-  },
 ];

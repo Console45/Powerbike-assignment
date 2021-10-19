@@ -1,7 +1,7 @@
 import React, { FC, ReactElement } from "react";
-import { View, StyleSheet, SafeAreaView, Text, FlatList } from "react-native";
+import { View, StyleSheet, Text, FlatList } from "react-native";
 import { ProductItem } from "../components";
-import { Tabs, Header } from "../layouts";
+import { Tabs } from "../layouts";
 import { Colors, Sizes } from "../theme";
 import { products } from "../utils";
 
@@ -9,8 +9,7 @@ interface HomeProps {}
 
 export const Home: FC<HomeProps> = (): ReactElement => {
   return (
-    <SafeAreaView style={styles.container}>
-      {/* <Header /> */}
+    <View style={styles.container}>
       <View style={styles.captionContainer}>
         <Text style={{ color: Colors.GRAY, fontSize: 17 }}>The World's </Text>
         <Text
@@ -38,7 +37,7 @@ export const Home: FC<HomeProps> = (): ReactElement => {
           )}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 const styles = StyleSheet.create({
