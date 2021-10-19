@@ -18,7 +18,7 @@ export default function App() {
         <Stack.Screen
           name={Screens.TAB}
           component={BottomTab}
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

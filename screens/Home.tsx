@@ -10,7 +10,7 @@ interface HomeProps {}
 export const Home: FC<HomeProps> = (): ReactElement => {
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      {/* <Header /> */}
       <View style={styles.captionContainer}>
         <Text style={{ color: Colors.GRAY, fontSize: 17 }}>The World's </Text>
         <Text
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
   },
   productListContainer: {
-    height: "68%",
+    height: "73%",
   },
   productList: {
     marginHorizontal: Sizes.MAIN_PADDING,

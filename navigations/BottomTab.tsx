@@ -86,9 +86,9 @@ const styles = StyleSheet.create({
   },
   actionBtnContainer: {
     backgroundColor: Colors.WHITE,
-    width: 80,
-    height: 80,
-    top: -30,
+    width: 75,
+    height: 75,
+    top: -25,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   actionBtn: {
     backgroundColor: Colors.TERTIARY,
     borderRadius: 100,
-    width: 60,
-    height: 60,
+    width: 55,
+    height: 55,
   },
 });
