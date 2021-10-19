@@ -25,13 +25,19 @@ export const Home: FC<HomeProps> = (): ReactElement => {
         </Text>
       </View>
       <Tabs />
-      <FlatList
-        keyExtractor={(item) => `${item.id}`}
-        data={products}
-        numColumns={2}
-        style={styles.productList}
-        renderItem={({ item }) => <ProductItem key={item.id} product={item} />}
-      />
+      <View style={styles.productListContainer}>
+        <FlatList
+          keyExtractor={(item) => `${item.id}`}
+          data={products}
+          numColumns={2}
+          ItemSeparatorComponent={() => <View style={{ height: 20 }} />}
+          columnWrapperStyle={{ justifyContent: "space-between" }}
+          style={styles.productList}
+          renderItem={({ item }) => (
+            <ProductItem key={item.id} product={item} />
+          )}
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -46,9 +52,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: "flex-end",
   },
+  productListContainer: {
+    height: "68%",
+  },
   productList: {
     marginHorizontal: Sizes.MAIN_PADDING,
     marginTop: 25,
-    height: 200,
   },
 });
